@@ -1,0 +1,360 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+/* Weights:
+Light - 300
+Regular - 400
+Medium - 500
+Bold - 700
+*/
+
+:root {
+  --white: #ffffff;                       /* White */
+  --primary: rgba(67,67,67,255);          /* Dark */
+  --secondary: rgba(155,155,155,255);     /* Light */
+  --tertiary: rgba(246,64,5,255);         /* Orange */
+  --accent: rgba(251,227,31,255);    /* Yello */
+}
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: rgba(255,255,255,255);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  scroll-behavior: smooth;
+  -webkit-user-select:none;
+        -webkit-touch-callout:none;
+             -moz-user-select:none;
+             -ms-user-select:none;
+             user-select:none;
+}
+
+.pageLogo {
+  width: 150px;
+  margin: 30px 0 0 0;
+}
+
+.logoutButton {
+  text-align: center;
+  width: 10%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border: 1px solid var(--primary);
+  background: var(--tertiary);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.logoutButton:hover {
+  background: var(--accent);
+}
+
+.logoutButtonHidden {
+  display: none;
+}
+
+.footer {
+  width: 100%;
+  margin: 100px 0 0 0;
+  padding: 20px;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+.footer  h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.hmiLogin {
+  border: 3px solid var(--primary);
+  min-height: 300px;
+  width: 400px;
+  margin: 30px 0 0 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.hmiLoginHidden {
+  display: none;
+}
+
+#loginWindowNotice {
+  width: 100%;
+  text-align: center;
+}
+
+.hmiLogin input {
+  text-align: center;
+  margin: 10px 0 0 0;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  box-sizing: border-box;
+  border: 1px solid var(--primary);
+}
+
+.hmiLogin button {
+  text-align: center;
+  margin: 10px 0 0 0;
+  width: 50%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border: 1px solid var(--primary);
+  background: var(--tertiary);
+}
+
+.hmiLogin button:hover {
+  background: var(--accent);
+}
+
+.hmiPage1 {
+  border: 3px solid var(--primary);
+  min-height: 300px;
+  width: 400px;
+  margin: 30px 0 0 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.hmiPage1Hidden {
+  border: 3px solid var(--primary);
+  min-height: 300px;
+  width: 400px;
+  margin: 30px 0 0 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.hmiPage1 button {
+  text-align: center;
+  margin: 10px 0 0 0;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border: 1px solid var(--primary);
+  background: var(--tertiary);
+}
+
+.hmiPage1 button:hover {
+  background: var(--accent);
+}
+
+.hmiPageLogistics {
+  border: 3px solid var(--primary);
+  min-height: 300px;
+  width: 95%;
+  margin: 30px 0 0 0;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.hmiPageLogisticsHidden {
+  display: none;
+}
+
+
+.hmiPageLogisticsContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hmiPageLogisticsContainerItem {
+  border: 3px solid var(--primary);
+  width: 280px;
+  height: 400px;
+  margin: 0 10px 0 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hmiPageLogisticsContainerItem img {
+  width: 50px;
+}
+
+.hmiPageLogisticsContainerItem td {
+  border: 1px solid black;
+  padding: 10px 0 10px 5px;
+}
+
+.hmiPageLogisticsContainerItem table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hmiPageLogisticsContainerItem button {
+  text-align: center;
+  margin: 10px 0 0 0;
+  width: 80%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border: 1px solid var(--primary);
+  background: var(--tertiary);
+}
+
+.hmiPageLogisticsContainerItem button:hover{
+  background: var(--accent);
+}
+
+.hmiPage2 {
+  border: 3px solid var(--primary);
+  min-height: 300px;
+  width: 400px;
+  margin: 30px 0 0 0;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.hmiPage2Hidden {
+  display: none;
+}
+
+.hmiPage2 button {
+  text-align: left;
+  margin: 10px 0 0 0;
+  padding: 0 0 0 20px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: solid;
+  border: 1px solid var(--primary);
+  background: var(--tertiary);
+}
+
+.hmiPage2 button:hover {
+  background: var(--accent);
+}
+
+.PyroPlantA {
+  border: 3px solid var(--primary);
+  height: 600px;
+  width: 95%;
+  margin: 30px 0 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.PyroPlantAHidden {
+  display: none;
+}
+
+.PyroPlantA p {
+  position: absolute;
+  bottom: 0;
+}
+
+.PyroPlantAContainer {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.PyroPlantALeft {
+  width: 40%;
+  background: var(--primary);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: center;
+}
+
+.PyroPlantALeftItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.PyroPlantALeftItem:hover {
+  background: var(--accent);
+}
+
+
+
+
+
+
+.PyroPlantARight {
+  width: 28%;
+}
+
+.PyroPlantARight td {
+  border: 1px solid black;
+  padding: 10px 0 10px 5px;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.PyroPlantARight table {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--secondary);
+}

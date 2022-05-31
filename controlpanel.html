@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PyroLogistics | HMI</title>
+    <link rel="stylesheet" href="css/hmi.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <!-- Logo -->
+    <img class="pageLogo" id="pageLogo" src="logo.png">
+
+    <form class="hmiLogin" id="hmiLogin">
+      <input type="text" placeholder="EMPLOYEE ID" id="hmiLoginUserName">
+      <input type="password" placeholder="PASSWORD" id="hmiLoginUserPassword">
+      <button type="button" onclick="scriptLoggedIn()"> LOGIN </button>
+      <p id="loginWindowNotice"></p>
+    </form>
+
+    <div class="hmiPage1Hidden" id="hmiPage1">
+      <button type="button" onclick="scriptShowLogistics()"> Logistics </button>
+      <button type="button" onclick="scriptShowHmiPage2()"> Plastic Converters </button>
+    </div>
+
+    <div class="hmiPageLogisticsHidden" id="hmiPageLogistics">
+      <h1>LOGISTICS</h1>
+
+      <div class="hmiPageLogisticsContainer">
+        <div class="hmiPageLogisticsContainerItem">
+          <img src="truck.png">
+          <h3>PYLTCK-1</h3>
+          <table>
+            <tr>
+              <td>From</td>
+              <td> Station </td>
+            </tr>
+            <tr>
+              <td>To</td>
+              <td> - </td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Idle</td>
+            </tr>
+            <tr>
+              <td>Tower</td>
+              <td> A </td>
+            </tr>
+          </table>
+
+          <button type="button"> Override </button>
+
+        </div>
+        <div class="hmiPageLogisticsContainerItem">
+          <img src="truck.png">
+          <h3>PYLTCK-2</h3>
+          <table>
+            <tr>
+              <td>From</td>
+              <td> Station </td>
+            </tr>
+            <tr>
+              <td>To</td>
+              <td> - </td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Idle</td>
+            </tr>
+            <tr>
+              <td>Tower</td>
+              <td> A </td>
+            </tr>
+          </table>
+
+          <button type="button"> Override </button>
+
+        </div>
+        <div class="hmiPageLogisticsContainerItem">
+          <img src="truck.png">
+          <h3>PYLTCK-3</h3>
+          <table>
+            <tr>
+              <td>From</td>
+              <td> Station </td>
+            </tr>
+            <tr>
+              <td>To</td>
+              <td> - </td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Idle</td>
+            </tr>
+            <tr>
+              <td>Tower</td>
+              <td> HQ </td>
+            </tr>
+          </table>
+
+          <button type="button"> Override </button>
+
+        </div>
+        <div class="hmiPageLogisticsContainerItem">
+          <img src="truck.png">
+          <h3>PYLTCK-4</h3>
+          <table>
+            <tr>
+              <td>From</td>
+              <td> Station </td>
+            </tr>
+            <tr>
+              <td>To</td>
+              <td> - </td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Idle</td>
+            </tr>
+            <tr>
+              <td>Tower</td>
+              <td> HQ </td>
+            </tr>
+          </table>
+
+          <button type="button"> Override </button>
+
+        </div>
+      </div>
+
+
+        <p> OVERRIDE DISABLED. DEMO MODE - ENABLED. </p>
+    </div>
+
+    <div class="hmiPage2Hidden" id="hmiPage2">
+      <button type="button" onclick="scriptShowPyroPlantA()"> A - San Pablo, Laguna </button>
+      <button type="button" onclick="scriptShowPyroPlantB()"> B - Rosario, Batangas (HQ) </button>
+    </div>
+
+    <div class="PyroPlantAHidden" id="PyroPlantA">
+      <h1>A - San Pablo, Laguna (EMULATED)</h1>
+
+      <div class="PyroPlantAContainer">
+        <div class="PyroPlantALeft">
+          <div class="PyroPlantALeftItem">Power Control</div>
+          <div class="PyroPlantALeftItem">Temperature Control</div>
+          <div class="PyroPlantALeftItem">Gate Control</div>
+          <div class="PyroPlantALeftItem">Conveyor Control</div>
+          <div class="PyroPlantALeftItem">Pressure Washer Control</div>
+          <div class="PyroPlantALeftItem">Dryer Control</div>
+          <div class="PyroPlantALeftItem">Shredder Control</div>
+          <div class="PyroPlantALeftItem">Condenser Control</div>
+          <div class="PyroPlantALeftItem">Barrel Dispenser Control</div>
+          <div class="PyroPlantALeftItem">Chamber Gate Control</div>
+          <div class="PyroPlantALeftItem">Emergency Stop</div>
+        </div>
+
+        <!-- Page 1 -->
+        <div class="PyroPlantARight">
+          <table>
+            <tr  style="background:green; color: white;">
+              <td> Operation Status </td>
+              <td> Normal </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr  style="background:green; color: white;">
+              <td>Tower Connection</td>
+              <td> Connected </td>
+            </tr>
+            <tr  style="background:green; color: white;">
+              <td>Converter Status</td>
+              <td> Active </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr  style="background:green; color: white;">
+              <td>Conveyor 1</td>
+              <td> Active </td>
+            </tr>
+            <tr>
+              <td>Conveyor 2</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Conveyor 3</td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr  style="background:green; color: white;">
+              <td>Chamber Gate 1</td>
+              <td> Open </td>
+            </tr>
+            <tr>
+              <td>Chamber Gate 2</td>
+              <td> Closed </td>
+            </tr>
+            <tr>
+              <td>Vapor Line Gate</td>
+              <td> Closed </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="PyroPlantARight">
+          <table>
+            <tr  style="background:green; color: white;">
+              <td>Pressure Washer</td>
+              <td> Active </td>
+            </tr>
+            <tr  style="background:green; color: white;">
+              <td>Dryer</td>
+              <td> Active </td>
+            </tr>
+            <tr  style="background:orange; color: white;">
+              <td> Grinder </td>
+              <td> Starting </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr  style="background:#800000; color: white;">
+              <td>Nitrogen Level</td>
+              <td> Very Low </td>
+            </tr>
+            <tr>
+              <td>Transformer Output</td>
+              <td> 0 V </td>
+            </tr>
+            <tr>
+              <td>Magnetron Status</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Condenser Status</td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <td>Barrels Filled</td>
+              <td> 0 Barrels</td>
+            </tr>
+            <tr>
+              <td>Carbon Black Produced</td>
+              <td> 0 KG </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <p> CONTROLS DISABLED. DEMO MODE - ENABLED. </p>
+    </div>
+
+    <div class="PyroPlantAHidden" id="PyroPlantB">
+      <h1>A - Rosario, Batangas (HQ)</h1>
+
+      <div class="PyroPlantAContainer">
+        <div class="PyroPlantALeft">
+          <div class="PyroPlantALeftItem">Power Control</div>
+          <div class="PyroPlantALeftItem">Temperature Control</div>
+          <div class="PyroPlantALeftItem">Gate Control</div>
+          <div class="PyroPlantALeftItem">Conveyor Control</div>
+          <div class="PyroPlantALeftItem">Pressure Washer Control</div>
+          <div class="PyroPlantALeftItem">Dryer Control</div>
+          <div class="PyroPlantALeftItem">Shredder Control</div>
+          <div class="PyroPlantALeftItem">Condenser Control</div>
+          <div class="PyroPlantALeftItem">Barrel Dispenser Control</div>
+          <div class="PyroPlantALeftItem">Chamber Gate Control</div>
+          <div class="PyroPlantALeftItem">Emergency Stop</div>
+        </div>
+
+        <!-- Page 1 -->
+        <div class="PyroPlantARight">
+          <table>
+            <tr  style="background:orange; color: black;">
+              <td> Operation Status </td>
+              <td> Unknown </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr style="background:#800000; color: white;">
+              <td>Tower Connection</td>
+              <td> Disconnected </td>
+            </tr>
+            <tr style="background:#800000; color: white;">
+              <td>Converter Status</td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <td>Conveyor 1</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Conveyor 2</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Conveyor 3</td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <td>Chamber Gate 1</td>
+              <td> Open </td>
+            </tr>
+            <tr>
+              <td>Chamber Gate 2</td>
+              <td> Open </td>
+            </tr>
+            <tr>
+              <td>Chamber Gate 3</td>
+              <td> Open </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="PyroPlantARight">
+          <table>
+            <tr>
+              <td>Pressure Washer</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Dryer</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td> Grinder </td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr  style="background:#800000; color: white;">
+              <td>Nitrogen Level</td>
+              <td> Very Low </td>
+            </tr>
+            <tr>
+              <td>Transformer Output</td>
+              <td> 0 V </td>
+            </tr>
+            <tr>
+              <td>Magnetron Status</td>
+              <td> Inactive </td>
+            </tr>
+            <tr>
+              <td>Condenser Status</td>
+              <td> Inactive </td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <td>Barrels Filled</td>
+              <td> 0 Barrels</td>
+            </tr>
+            <tr>
+              <td>Carbon Black Produced</td>
+              <td> 0 KG </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <p> CONTROLS DISABLED. DEMO MODE - ENABLED. </p>
+    </div>
+
+
+    <!-- Logout -->
+    <button id="hmiLogOutButton" type="button" class="logoutButtonHidden" onclick="scriptLogOut()"> Logout </button>
+
+
+    <!-- Third Section -->
+    <div class="footer">
+      <h5>PYROLOGISTICS System Control</h5>
+      <h5>A proof of concept by Miguel Almonte</h5>
+    </div>
+
+    <script src="scripts/hmi.js" charset="utf-8"></script>
+  </body>
+</html>
